@@ -7,8 +7,6 @@ trigger:
 - main
 
 pool:
-  name: Agent1
-  demands: '/p:msbuild=Package /p:visualstudio=Package /p:vstest=Package /p:Agent.Version=Package /p:-gtVersion 2.163.1=Package'
   vmImage: 'windows-latest'
 
 variables:
