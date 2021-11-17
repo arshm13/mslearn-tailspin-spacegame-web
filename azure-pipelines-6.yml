@@ -6,7 +6,8 @@
 trigger:
 - main
 
-pool: Agent1
+pool:
+  name: Agent1
   vmImage: 'windows-latest'
 
 variables:
