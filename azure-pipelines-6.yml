@@ -14,11 +14,10 @@ variables:
   solution: '**/*.sln'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Release'
-  
+
 - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
-
 - task: VSTest@2
   inputs:
     testSelector: 'testAssemblies'
