@@ -7,13 +7,7 @@ trigger:
 - main
 
 pool:
-  name: Agent1
-  demands:
-  - task: 'MSBuild@1'
-    inputs:
-      solution: '**/*.sln'
-      msbuildArchitecture: 'x64'
-   
+  name: Agent1  
   vmImage: 'windows-latest'
 
 variables:
@@ -23,6 +17,11 @@ variables:
 
 steps:
 - task: NuGetToolInstaller@1
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.sln'
+    msbuildArchitecture: 'x64'
+
 
 - task: NuGetCommand@2
   inputs:
