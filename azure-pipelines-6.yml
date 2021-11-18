@@ -10,9 +10,17 @@ trigger:
 pool: 
   name: Agent1
   demands:
-- task: MSBuild@1
+    - task: MSBuild@1
   inputs:
     solution: '**/*.sln'
+    - task: VSTest@2
+      inputs:
+        testSelector: 'testAssemblies'
+        testAssemblyVer2: |
+          **\*test*.dll
+          !**\*TestAdapter.dll
+          !**\obj\**
+        searchFolder: '$(System.DefaultWorkingDirectory)'
   vmImage: 'windows-latest'
 
 
