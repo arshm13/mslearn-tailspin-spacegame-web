@@ -5,6 +5,7 @@ trigger:
 
 pool:
   name: Agent1
+  vmImage: 'Ubuntu-latest'
 
 variables:
   solution: '**/*.sln'
