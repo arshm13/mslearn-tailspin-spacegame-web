@@ -7,6 +7,9 @@ pool: MyPool
   - npm
 
 variables:
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
   buildConfiguration: 'Release'
 
 steps:
