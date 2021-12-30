@@ -4,7 +4,7 @@ trigger:
 - main
 
 pool:
-  name: agent1
+  name: MyPool
   vmImage: 'Ubuntu-latest'
 
 variables:
